@@ -26,6 +26,7 @@ Welcome to th Games of Moria memory card game.
 - 1001 Fonts - create custom font
 - Font Awesome - to import icons
 - Favicon.io - to create favicon
+- TinyJPG - to compress images
 
 
 # Deployment
