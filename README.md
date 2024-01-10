@@ -1,39 +1,46 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Games of Moria
 
-Welcome,
+Welcome to th Games of Moria memory card game.
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+# Introduction
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+# User Experience
+## User stories
 
-## Codeanywhere Reminders
+# Design
+## Colors
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+## Typography
 
-`python3 -m http.server`
+## Images
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+# Features
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+# Technologies Used
+- Languages:
+    - HTML: to create structure
+    - CSS: to style
+    - JavaScript: to manipulate content
+- VSCode - to build the project
+- GitHub - to save and store files
+- 1001 Fonts - create custom font
+- Font Awesome - to import icons
+- Favicon.io - to create favicon
 
-`http_server`
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+# Deployment
+To deploy the project I used GitHub as my hosting platform and took the steps as follow:
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+-go to **Settings**
+-in the **Code and Automation** section select **Pages**
+-select source to **deploy from branch**
+-select **Main Branch**
+-under branch click **Save**
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+# Testing
+- HMTL & CSS
+- JavaScript
 
-To log into the Heroku toolbelt CLI:
+# Bugs
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
----
-
-Happy coding!
+# Credits
