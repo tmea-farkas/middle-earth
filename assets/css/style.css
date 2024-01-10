@@ -4,6 +4,7 @@
     margin: 0;
     box-sizing: border-box;
 }
+/* Custom Font */
 @font-face {
     font-family: 'Aniron';
     src: url('../fonts/anirm___-webfont.woff') format('woff');
@@ -11,12 +12,39 @@
     font-style: normal;
 
 }
+/* Basic styles */
 body {
     background-color: #334A51;
+    font-family: 'Aniron';
+    color: #96AFB8;
 }
-.heading {
+#heading {
     background-color: #334A51;
     font-family: 'Aniron';
     text-align: center;
+    color:#94E7FF;
 
 }
+
+/* Home Styles */
+
+#landing div {
+    position: relative;
+    text-align: center;
+    padding: 0 20em;
+    box-shadow: 0 3px 3px #94E7FF;
+}
+#landing h2 {
+    text-align: center;
+    color:#94E7FF;
+    padding: 0 40px;
+}
+
+#landing p {
+    text-align: center;
+    color:#96AFB8;
+    padding: 0 40px;
+}
+/* Game Entry Styles */
+
+/* Game Styles */
