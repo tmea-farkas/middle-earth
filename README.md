@@ -27,6 +27,7 @@ Welcome to th Games of Moria memory card game.
 - Font Awesome - to import icons
 - Favicon.io - to create favicon
 - TinyJPG - to compress images
+- ColorSpace - to find a matching color palette
 
 
 # Deployment

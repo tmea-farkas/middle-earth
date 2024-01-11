@@ -22,7 +22,7 @@ body {
     background-color: #334A51;
     font-family: 'Aniron';
     text-align: center;
-    color:#FCFCD4;
+    color:#FFD1AE;
     font-size: 3em;
 
 }
@@ -32,8 +32,6 @@ body {
 #landing div {
     position: relative;
     text-align: center;
-    padding: 0 20em;
-    box-shadow: 0 3px 3px #94E7FF;
 }
 #landing h2 {
     text-align: center;
@@ -46,6 +44,49 @@ body {
     color:#96AFB8;
     padding: 0 40px;
 }
+
+.additions {
+    display:inline-flex;
+    padding: 20px 30px;
+    background:#334A51;
+    cursor: pointer;
+    border: 4px outset #69787d;
+    border-radius: 10px;
+    outline: invert;
+    width: 300px;
+    height: 120px;
+    justify-content: center;
+    align-items: center;
+}
+
+.knowledge {
+    display:inline-flex;
+    padding: 20px 30px;
+    background:#334A51;
+    cursor: pointer;
+    border: 4px outset #69787d;
+    border-radius: 10px;
+    outline:invert;
+    width: 300px;
+    height: 120px;
+}
+
+.adventure {
+    display:inline-flex;
+    padding: 20px 30px;
+    background:#334A51;
+    cursor: pointer;
+    border: 4px outset #69787d;
+    border-radius: 10px;
+    outline:invert;
+    width: 300px;
+    height: 120px;
+}
+
+.hidden {
+    display: none;
+}
+
 /* Game Entry Styles */
 #moria {
     background: url(../images/moria.jpeg) no-repeat center center/cover;
