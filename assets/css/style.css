@@ -17,6 +17,9 @@ body {
     background-color: #334A51;
     font-family: 'Aniron';
     color: #96AFB8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 #heading {
     background-color: #334A51;
@@ -72,6 +75,7 @@ body {
     height: 120px;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .adventure {
@@ -86,6 +90,7 @@ body {
     height: 120px;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .hidden {
