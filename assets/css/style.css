@@ -57,6 +57,7 @@ body {
     height: 120px;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .knowledge {
@@ -69,6 +70,8 @@ body {
     outline:invert;
     width: 300px;
     height: 120px;
+    justify-content: center;
+    align-items: center;
 }
 
 .adventure {
@@ -81,6 +84,8 @@ body {
     outline:invert;
     width: 300px;
     height: 120px;
+    justify-content: center;
+    align-items: center;
 }
 
 .hidden {
@@ -98,5 +103,45 @@ body {
     padding: 10px 5% 0 5%;
 }
 
+.riddle {
+    position: absolute;
+    bottom: 5vw;
+    left: 40vw;
+    width: 70%;
+    padding: 20px;
+    background: transparent;
+    font-family: 'Aniron';
+    color:#94E7FF;
+    outline:invert;
+    text-align: center;
+    font-size: large;
+    justify-content: center;
+}
+
 
 /* Game Styles */
+
+
+/* Media quiries*/
+
+/* Tablets and up */
+@media screen and (min-width: 768px) {
+    .additions,
+    .knowledge,
+    .adventure {
+        width: 70vw;
+        height: 15vw;
+        margin-bottom: 20px;
+    }
+}
+
+/*Laptops and above*/
+@media screen and (min-width: 992px) {
+   .additions,
+    .knowledge,
+    .adventure {
+        width: 70vw;
+        height: 15vw;
+        margin-bottom: 20px;
+    } 
+}
