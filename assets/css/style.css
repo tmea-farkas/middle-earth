@@ -164,16 +164,17 @@ body {
 .image:hover {
     transform: rotateY(180deg);
 }
-.image.shake{
-    animation: shake 0.50s ease;
-}
+
 
 .img {
     height: auto;
     width: 70px; 
 }
 .front-view {
-    display: none;
+    transform: rotateY(0deg);
+}
+.back-view {
+    transform: rotateY(180deg);
 }
 
 
