@@ -126,24 +126,43 @@ body {
 }
 
 /* Game Styles */
-
+#game-play {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .game-container {
     min-height: 80%;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
-    padding: 25px;
+    justify-content: space-around;
+    padding: 10px;
     border-radius: 15px;
     background: #96AFB8;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
-    height: auto;
+}
+.game-container > .images {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.game-container > div {
+.game-container > div > div {
     display: flex;
-    flex-basis: calc(25% - 50px);
+    flex-basis: calc(25% - 40px);
+    margin-bottom: 20px;
+    text-align: center;
+}
+.game-container > div > div.view {
+    display: flex;
     justify-content: center;
-    flex-flow: wrap column;
+    align-items: center;
+    height: 100%;
+}
+.front-view {
+    display: none;
 }
 
 .images {
@@ -162,6 +181,7 @@ body {
 .img {
     height: auto;
     width: 70px; 
+    padding: 5px;
 }
 
 /* Media quiries*/
