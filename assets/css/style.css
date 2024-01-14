@@ -147,18 +147,11 @@ body {
 
 }
 
-.game-container > ul.images > li.image.flipped > div.front-view {
-    display: none;
-}
 
-.game-container > ul.images > li.image.flipped > div.back-view {
-    display: flex;
-}
-/*
 .front-view {
     display: none;
 }
-*/
+
 .images {
     list-style-type: none;
     position: relative;
