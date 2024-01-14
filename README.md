@@ -9,7 +9,7 @@ This game was created by and for fans of the Tolkien-universe. Although it being
 
 Navigating the game is simple:
 Once on the home page the user can utilise the clickable buttons to either tell them more about the game ("*Gather the Knowledge*), choose to have a timer (*Additions*) or go straight to the game itself (*Adventure awaits*).
-**To enter the game type in the word *mellon*** (elvish for friend).
+**To enter the game type in the word "*mellon*"** (elvish for friend).
 
 
 # User Experience
@@ -41,7 +41,7 @@ In the following sections there is further elaboration on what design elements w
 
 # Design
 
-## Colors
+## Colours
 When deciding on the colour theme I used ColorSpace to help creating a visually pleasing palette.
 The colours are
 - Palasite Blue: Hex #334A51 - used as background color throughout 
@@ -56,12 +56,23 @@ Deciding on the font for the game was easy. I chose to stay true to the theme an
 **Font Family: "Aniron"** from 1001 Fonts.
 
 ## Images
-The specific images used in the game are 
+The specific images used in the game are of the main characters of the story. The *moria* section background is the image of the Gates of Moria from the movie adaptations providing a sense of beginning of the "adventure" that follows playing the game.
+All images have been sourced from Reddit (specifically looked for high-resolution images in this theme).
 
 # Features
+
 ## Existing Features
 
+### The landing page
+
+### Game Entry 
+
+### Gameplay
+
 ## Features left to implement 
+
+When possible I am also planning on implementing an instant feedback feature connected to the end result of the game where users that opted for completing the game with the timer activated and managed to successfully complete the game within the time allotted, will get a "reward" message containing a fun-fact relating to the movie adaptations.
+
 
 # Technologies Used
 - Languages:
@@ -80,11 +91,11 @@ The specific images used in the game are
 # Deployment
 To deploy the project I used GitHub as my hosting platform and took the steps as follow:
 
--go to **Settings**
--in the **Code and Automation** section select **Pages**
--select source to **deploy from branch**
--select **Main Branch**
--under branch click **Save**
+- go to **Settings**
+- in the **Code and Automation** section select **Pages**
+- select source to **deploy from branch**
+- select **Main Branch**
+- under branch click **Save**
 
 # Testing
 - HMTL & CSS
@@ -93,14 +104,15 @@ To deploy the project I used GitHub as my hosting platform and took the steps as
 # Bugs
 
 During development there were several bugs that needed adressing:
-1. getting the #moria section background image to position focusing on the middle of the image. 
+1. getting the #moria section background image to position focusing on the middle of the image on all size devices. 
     - solved the issue by adjusting the background-position from 75% to 50%.
-2. 
+2. figuring out the cards to display in a 4x4 grid
+    - the issue was solved by changing the class attribute the styles were applied to from ==.game-container== to ==.images==
 
 # Credits
 All content has been curated by me, Timea Farkas.
 Help during development accrued from:
-- Matt Bodden, my mentor
+- Matthew Bodden, mentor
 - Slack colleagues
 - W3Schools providing explanations
 - ChatGPT providing detailed explanations to some elements and attributes

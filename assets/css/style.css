@@ -99,7 +99,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.hidden {
+.hidden-p {
     display: none;
 }
 
@@ -128,70 +128,107 @@ body {
     justify-content: center;
     align-items: center;
 }
-
+ul {
+    list-style: none;
+    }
+    
 .game-container {
-    min-height: 80%;
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 10px;
+    justify-content: center;
+    padding: 20px;
     border-radius: 15px;
     background: #96AFB8;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
-}
-
-.images {
+    }
+    
+.game-grid {
+    padding: 3px;
     display: grid;
-    grid-template-columns:repeat(4, 1fr);
-    grid-template-rows:repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    }
+    
 
-}
-
-
-.front-view {
+.card img {
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+    }
+    
+.back {
     display: none;
-}
+    }
 
-.images {
-    list-style-type: none;
-    position: relative;
-    cursor: pointer;
-    perspective: 1000px;
-    transform-style: preserve-3d;
-    transition: transform 0.5s;
-}
-
-.image:hover {
+.card:hover {
     transform: rotateY(180deg);
-}
-
-
-.img {
-    height: auto;
-    width: 70px; 
-    padding: 2px;
 }
 
 /* Media quiries*/
 
 /* Tablets and up */
 @media screen and (min-width: 768px) {
-    .additions,
-    .knowledge,
-    .adventure {
-        width: 70vw;
-        height: 15vw;
-        margin-bottom: 20px;
-    }
+.additions,
+.knowledge,
+.adventure {
+    width: 70vw;
+    height: 15vw;
+    margin-bottom: 20px;
+}
+
+.game-container {
+    max-width: 80%;
+}
 }
 
 /*Laptops and above*/
 @media screen and (min-width: 992px) {
-   .additions,
-    .knowledge,
-    .adventure {
-        width: 70vw;
-        height: 15vw;
-        margin-bottom: 20px;
-    } 
+
+.additions,
+.knowledge,
+.adventure {
+    width: 70vw;
+    height: 15vw;
+    margin-bottom: 20px;
+}
+
+.game-container {
+    max-width: 80%;
+}
+
+/*
+@media
+ only screen and (max-width: 639px) {
+.game-grid {
+max-width: 100%;
+}
+}
+
+@media
+ only screen and (min-width: 640px) {
+.game-grid {
+max-width: 640px;
+}
+}
+
+@media
+ only screen and (min-width: 768px) {
+.game-grid {
+max-width: 768px;
+}
+}
+
+@media
+ only screen and (min-width: 900px) {
+.game-grid {
+max-width: 900px;
+}
+}
+
+@media
+ only screen and (min-width: 1024px) {
+.game-grid {
+max-width: 1024px;
+}
+*/
 }

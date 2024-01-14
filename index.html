@@ -26,7 +26,7 @@
 <section id="landing">
   <div>
     <h2 id="knowledgeButton" class="knowledge">Gather the knowledge</h2>
-    <p id="hiddenP1" class="hidden"> Welcome to the Games of Moria! This is a memory card game based on the characters of Middle Earth.
+    <p id="hiddenP1" class="hidden-p"> Welcome to the Games of Moria! This is a memory card game based on the characters of Middle Earth.
         Simply click on the 'Adventure Awaits!' button, solve the riddle and press Enter.
         Find the pairs of each character through flipping the images over.
 
@@ -36,7 +36,7 @@
 
   <div>
     <h2 id="additionsButton" class="additions">Additions</h2>
-    <p id="hiddenP2" class="hidden">Once in game you can opt to use a timer, which will give you 30 seconds to complete the game.
+    <p id="hiddenP2" class="hidden-p">Once in game you can opt to use a timer, which will give you 30 seconds to complete the game.
        Should you fail to do so, just press the Restart button!
        May Eru bless you with the speed of the Mearas!</p>
   </div>
@@ -56,137 +56,73 @@
 
     <!-- Game Play -->
 <section id="game-play">
-  <div class="game-container">
-    <ul class="images">
-      <li class="image">
-        <div class=" view front-view">
-          <img class="img" src="./assets/images/ring.jpeg" alt="front-image">
-        </div>
-        <div class=" view back-view">
-          <img class="img" src="./assets/images/aragorn.jpg" alt="back-image">
-        </div>
+  <section class="game-container">
+    <ul class="game-grid">
+      <li class="card">
+        <img class="front" src="./assets/images/aragorn.jpg" alt="img1" />
+        <img class="back hidden" src="./assets/images/ring.jpeg" alt="back" />
       </li>
-      <li class="image">
-        <div class="view front-view">
-          <img class="img" src="./assets/images/ring.jpeg" alt="front-image">
-        </div>
-        <div class="view back-view">
-          <img class="img" src="./assets/images/arwen.jpg" alt="back-image">
-        </div>
+      <li class="card">
+        <img class="front" src="./assets/images/arwen.jpg" alt="img2" />
+        <img class="back hidden" src="./assets/images/ring.jpeg" alt="back" />
       </li>
-      <li class="image">
-        <div class="view front-view">
-          <img class="img" src="./assets/images/ring.jpeg" alt="front-image">
-        </div>
-        <div class="view back-view">
-          <img class="img" src="./assets/images/boromir.jpg" alt="back-image">
-        </div>
+      <li class="card">
+        <img class="front" src="./assets/images/boromir.jpg" alt="img3" />
+        <img class="back hidden" src="./assets/images/ring.jpeg" alt="back" />
       </li>
-      <li class="image">
-        <div class="view front-view">
-          <img class="img" src="./assets/images/ring.jpeg" alt="front-image">
-        </div>
-        <div class="view back-view">
-          <img class="img" src="./assets/images/gandalf.jpg" alt="back-image">
-        </div>
+      <li class="card">
+        <img class="front" src="./assets/images/gandalf.jpg" alt="img4" />
+        <img class="back hidden" src="./assets/images/ring.jpeg" alt="back" />
       </li>
-      <li class="image">
-        <div class="view front-view">
-          <img class="img" src="./assets/images/ring.jpeg" alt="front-image">
-        </div>
-        <div class="view back-view">
-          <img class="img" src="./assets/images/gimli.jpg" alt="back-image">
-        </div>
+      <li class="card">
+        <img class="front" src="./assets/images/gimli.jpg" alt="img1" />
+        <img class="back hidden" src="./assets/images/ring.jpeg" alt="back" />
       </li>
-      <li class="image">
-        <div class="view front-view">
-          <img class="img" src="./assets/images/ring.jpeg" alt="front-image">
-        </div>
-        <div class="view back-view">
-          <img class="img" src="./assets/images/gollum.jpg" alt="back-image">
-        </div>
+      <li class="card">
+        <img class="front" src="./assets/images/gollum.jpg" alt="img2" />
+        <img class="back hidden" src="./assets/images/ring.jpeg" alt="back" />
       </li>
-      <li class="image">
-        <div class="view front-view">
-          <img class="img" src="./assets/images/ring.jpeg" alt="front-image">
-        </div>
-        <div class="view back-view">
-          <img class="img" src="./assets/images/legolas.jpg" alt="back-image">
-        </div>
+      <li class="card">
+        <img class="front" src="./assets/images/legolas.jpg" alt="img3" />
+        <img class="back hidden" src="./assets/images/ring.jpeg" alt="back" />
       </li>
-      <li class="image">
-        <div class="view front-view">
-          <img class="img" src="./assets/images/ring.jpeg" alt="front-image">
-        </div>
-        <div class="view back-view">
-          <img class="img" src="./assets/images/samwise.jpg" alt="back-image">
-        </div>
+      <li class="card">
+        <img class="front" src="./assets/images/samwise.jpg" alt="img4" />
+        <img class="back hidden" src="./assets/images/ring.jpeg" alt="back" />
       </li>
-      <li class="image">
-        <div class="view front-view">
-          <img class="img" src="./assets/images/ring.jpeg" alt="front-image">
-        </div>
-        <div class="view back-view">
-          <img class="img" src="./assets/images/aragorn.jpg" alt="back-image">
-        </div>
+      <li class="card">
+        <img class="front" src="./assets/images/aragorn.jpg" alt="img1" />
+        <img class="back hidden" src="./assets/images/ring.jpeg" alt="back" />
       </li>
-      <li class="image">
-        <div class="view front-view">
-          <img class="img" src="./assets/images/ring.jpeg" alt="front-image">
-        </div>
-        <div class="view back-view">
-          <img class="img" src="./assets/images/arwen.jpg" alt="back-image">
-        </div>
+      <li class="card">
+        <img class="front" src="./assets/images/arwen.jpg" alt="img2" />
+        <img class="back hidden" src="./assets/images/ring.jpeg" alt="back" />
       </li>
-      <li class="image">
-        <div class="view front-view">
-          <img class="img" src="./assets/images/ring.jpeg" alt="front-image">
-        </div>
-        <div class="view back-view">
-          <img class="img" src="./assets/images/boromir.jpg" alt="back-image">
-        </div>
+      <li class="card">
+        <img class="front" src="./assets/images/boromir.jpg" alt="img3" />
+        <img class="back hidden" src="./assets/images/ring.jpeg" alt="back" />
       </li>
-      <li class="image">
-        <div class="view front-view">
-          <img class="img" src="./assets/images/ring.jpeg" alt="front-image">
-        </div>
-        <div class="view back-view">
-          <img class="img" src="./assets/images/gandalf.jpg" alt="back-image">
-        </div>
+      <li class="card">
+        <img class="front" src="./assets/images/gandalf.jpg" alt="img4" />
+        <img class="back hidden" src="./assets/images/ring.jpeg" alt="back" />
       </li>
-      <li class="image">
-        <div class="view front-view">
-          <img class="img" src="./assets/images/ring.jpeg" alt="front-image">
-        </div>
-        <div class="view back-view">
-          <img class="img" src="./assets/images/gimli.jpg" alt="back-image">
-        </div>
+      <li class="card">
+        <img class="front" src="./assets/images/gimli.jpg" alt="img1" />
+        <img class="back hidden" src="./assets/images/ring.jpeg" alt="back" />
       </li>
-      <li class="image">
-        <div class="view front-view">
-          <img class="img" src="./assets/images/ring.jpeg" alt="front-image">
-        </div>
-        <div class="view back-view">
-          <img class="img" src="./assets/images/gollum.jpg" alt="back-image">
-        </div>
+      <li class="card">
+        <img class="front" src="./assets/images/gollum.jpg" alt="img2" />
+        <img class="back hidden" src="./assets/images/ring.jpeg" alt="back" />
       </li>
-      <li class="image">
-        <div class="view front-view">
-          <img class="img" src="./assets/images/ring.jpeg" alt="front-image">
-        </div>
-        <div class="view back-view">
-          <img class="img" src="./assets/images/legolas.jpg" alt="back-image">
-        </div>
+      <li class="card">
+        <img class="front" src="./assets/images/legolas.jpg" alt="img3" />
+        <img class="back hidden" src="./assets/images/ring.jpeg" alt="back" />
       </li>
-      <li class="image">
-        <div class="view front-view">
-          <img class="img" src="./assets/images/ring.jpeg" alt="front-image">
-        </div>
-        <div class="view back-view">
-          <img class="img" src="./assets/images/samwise.jpg" alt="back-image">
-        </div>
+      <li class="card">
+        <img class="front" src="./assets/images/samwise.jpg" alt="img4" />
+        <img class="back hidden" src="./assets/images/ring.jpeg" alt="back" />
       </li>
     </ul>
-  </div>
+  </section>
 </section>
   </body>
