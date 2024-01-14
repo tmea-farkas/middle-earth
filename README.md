@@ -1,6 +1,6 @@
 # Games of Moria
 
-Welcome to the Games of Moria memory card game.
+Welcome to the [Games of Moria](https://tmea-farkas.github.io/middle-earth/) memory card game.
 
 # Introduction
 
