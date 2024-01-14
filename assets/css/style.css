@@ -140,10 +140,25 @@ body {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
 }
 
-.front-view {
+.images {
+    display: grid;
+    grid-template-columns:repeat(4, 1fr);
+    grid-template-rows:repeat(4, 1fr);
+
+}
+
+.game-container > ul.images > li.image.flipped > div.front-view {
     display: none;
 }
 
+.game-container > ul.images > li.image.flipped > div.back-view {
+    display: flex;
+}
+/*
+.front-view {
+    display: none;
+}
+*/
 .images {
     list-style-type: none;
     position: relative;
@@ -161,7 +176,7 @@ body {
 .img {
     height: auto;
     width: 70px; 
-    padding: 5px;
+    padding: 2px;
 }
 
 /* Media quiries*/
