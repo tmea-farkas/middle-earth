@@ -68,7 +68,7 @@ body {
     align-items: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
-
+/*
 .knowledge {
     display:inline-flex;
     padding: 20px 30px;
@@ -83,7 +83,7 @@ body {
     align-items: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
-
+*/
 .adventure {
     display:inline-flex;
     padding: 20px 30px;
@@ -98,11 +98,11 @@ body {
     align-items: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
-
+/*
 .hidden-p {
     display: none;
 }
-
+*/
 /* Game Entry Styles */
 #moria {
     background: url(../images/moria.jpeg) no-repeat center center/cover;
@@ -152,7 +152,7 @@ ul {
     
 
 .card img {
-    object-fit: cover;
+    object-fit:contain;
     max-width: 100%;
     max-height: 100%;
     }
@@ -178,7 +178,7 @@ ul {
 }
 
 .game-container {
-    max-width: 80%;
+    max-width: 50%;
 }
 }
 
@@ -194,8 +194,47 @@ ul {
 }
 
 .game-container {
-    max-width: 80%;
+    max-width: 50%;
 }
 
 
 }
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    height: 70%;
+    font-size: 12px;
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 10px;
+    overflow-y: auto;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
