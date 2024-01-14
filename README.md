@@ -107,7 +107,7 @@ During development there were several bugs that needed adressing:
 1. getting the #moria section background image to position focusing on the middle of the image on all size devices. 
     - solved the issue by adjusting the background-position from 75% to 50%.
 2. figuring out the cards to display in a 4x4 grid
-    - the issue was solved by changing the class attribute the styles were applied to from ==.game-container== to ==.images==
+    - the issue was solved by changing the class attribute the styles were applied to from ==.game-container== to ==.game-grid==
 
 # Credits
 All content has been curated by me, Timea Farkas.

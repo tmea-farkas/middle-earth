@@ -141,7 +141,8 @@ ul {
     background: #96AFB8;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
     }
-    
+
+/*creates 4x4 grid layout*/    
 .game-grid {
     padding: 3px;
     display: grid;
@@ -196,39 +197,5 @@ ul {
     max-width: 80%;
 }
 
-/*
-@media
- only screen and (max-width: 639px) {
-.game-grid {
-max-width: 100%;
-}
-}
 
-@media
- only screen and (min-width: 640px) {
-.game-grid {
-max-width: 640px;
-}
-}
-
-@media
- only screen and (min-width: 768px) {
-.game-grid {
-max-width: 768px;
-}
-}
-
-@media
- only screen and (min-width: 900px) {
-.game-grid {
-max-width: 900px;
-}
-}
-
-@media
- only screen and (min-width: 1024px) {
-.game-grid {
-max-width: 1024px;
-}
-*/
 }
