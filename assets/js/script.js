@@ -1,10 +1,4 @@
 // Home 
-
-//Game Entry
-
-//Game Play
-
-//modal test
 let btn1 = document.getElementById('myBtn') 
 btn1.addEventListener('click', openModal)
 
@@ -22,3 +16,7 @@ function closeModal() {
     console.log('modalClosed')
     modal.style.display = 'none'
 }
+//Game Entry
+
+//Game Play
+

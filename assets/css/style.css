@@ -37,7 +37,13 @@ body {
 
 
 /* Home Styles */
-
+button {
+    font-family: 'Aniron';
+    text-align: center;
+    padding: 0 40px;
+    font-size: larger;
+    display:flex;
+}
 #landing div {
     position: relative;
     text-align: center;
@@ -54,24 +60,68 @@ body {
     padding: 0 40px;
 }
 
-.additions {
-    display:inline-flex;
-    padding: 20px 30px;
+/* Modal Box and Content Styles*/
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  #myBtn {
+    text-align: center;
+    color:#94E7FF;
+    padding: 0 40px;
     background:#334A51;
     cursor: pointer;
     border: 4px outset #69787d;
     border-radius: 10px;
-    outline: invert;
+    outline:invert;
     width: 300px;
     height: 120px;
     justify-content: center;
     align-items: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-/*
-.knowledge {
-    display:inline-flex;
-    padding: 20px 30px;
+  }
+  .modal-content {
+    height: 70%;
+    font-size: 12px;
+    background-color: #69787d;
+    color:#94E7FF;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 10px;
+    overflow-y: auto;
+    border: 1px solid #888;
+    border-radius: 5%;
+    text-align: center;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+#adventure-btn {
+    text-align: center;
+    color:#94E7FF;
+    padding: 0 40px;
     background:#334A51;
     cursor: pointer;
     border: 4px outset #69787d;
@@ -83,26 +133,8 @@ body {
     align-items: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
-*/
-.adventure {
-    display:inline-flex;
-    padding: 20px 30px;
-    background:#334A51;
-    cursor: pointer;
-    border: 4px outset #69787d;
-    border-radius: 10px;
-    outline:invert;
-    width: 300px;
-    height: 120px;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-/*
-.hidden-p {
-    display: none;
-}
-*/
+
+
 /* Game Entry Styles */
 #moria {
     background: url(../images/moria.jpeg) no-repeat center center/cover;
@@ -169,9 +201,7 @@ ul {
 
 /* Tablets and up */
 @media screen and (min-width: 768px) {
-.additions,
-.knowledge,
-.adventure {
+    #myBtn, #adventure-btn {
     width: 70vw;
     height: 15vw;
     margin-bottom: 20px;
@@ -196,45 +226,4 @@ ul {
 .game-container {
     max-width: 50%;
 }
-
-
 }
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1000; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  
-  /* Modal Content/Box */
-  .modal-content {
-    height: 70%;
-    font-size: 12px;
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 10px;
-    overflow-y: auto;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-  }
-  
-  /* The Close Button */
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
