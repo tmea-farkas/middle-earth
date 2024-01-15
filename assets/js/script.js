@@ -22,8 +22,8 @@ let advBtn = document.getElementById('adventure-btn')
 advBtn.addEventListener('click', toMoria)
 
 function toMoria() {
-    document.getElementById('moria');
-
+    document.getElementById('moria').style.display = 'block';
+    console.log('At the gates')
 }
 
 
