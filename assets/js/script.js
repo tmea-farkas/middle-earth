@@ -18,5 +18,14 @@ function closeModal() {
 }
 //Game Entry
 
+let advBtn = document.getElementById('adventure-btn')
+advBtn.addEventListener('click', toMoria)
+
+function toMoria() {
+    document.getElementById('moria');
+
+}
+
+
 //Game Play
 
