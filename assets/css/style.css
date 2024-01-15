@@ -90,6 +90,10 @@ button {
     text-align: center;
     width: 80%; /* Could be more or less, depending on screen size */
   }
+  .hidden-p {
+    text-align: center;
+    padding-top: 5px;
+  }
   
   /* The Close Button */
   .close {
@@ -144,7 +148,7 @@ button {
     font-family: 'Aniron';
     color:#94E7FF;
     text-align: center;
-    font-size: large;
+    font-size: small;
     top: 450px;
 }
 
@@ -204,11 +208,14 @@ ul {
 .game-container {
     max-width: 50%;
 }
+
+#riddle {
+    font-size: large;
+    width: 70%;
+    left: 100px;
 }
-.riddle {
-    left: 140px;
-    font-size: medium;
 }
+
 
 /*Laptops and above*/
 @media screen and (min-width: 992px) {
@@ -224,7 +231,16 @@ ul {
 }
 
 #riddle {
-    left: 180px;
+    left: 160px;
     font-size: large;
+    top: 600px;
+}
+
+@media screen and (min-width: 1440px) {
+    #riddle {
+        top: 750px;
+        left: 200px;
+        font-size: x-large;
+    }
 }
 }
