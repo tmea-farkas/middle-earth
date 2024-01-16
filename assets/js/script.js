@@ -23,8 +23,8 @@ function closeModal() {
 let advBtn = document.getElementById('adventure-btn')
 let closeLanding = document.getElementById('landing')
 let closeTitle = document.getElementById('title')
-advBtn.addEventListener('click', toMoria, closeLanding, closeTitle) //when button clicked landing diasppears and moria section appears
-
+//when button clicked landing diasppears and moria section appears
+advBtn.addEventListener('click', toMoria, closeLanding, closeTitle) 
 
 function toMoria() {
     document.getElementById('moria').style.display = 'block';
