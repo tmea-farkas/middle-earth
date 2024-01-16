@@ -32,8 +32,24 @@ function toMoria() {
     document.getElementById('title').style.display = 'none';
     console.log('Landing Closed; At the gates')
 }
+// Password validation
 
+function validatePassword() {
+    var enteredPassword = document.getElementById('riddle').value.toLowerCase();
+    var expectedPassword = "mellon".toLowerCase();
 
+    if (enteredPassword === expectedPassword) {
+        window.location.href = '#game-play' }
+    else {
+            alert("You shall not pass!");
+        }
+
+    }
+document.getElementById('riddle').addEventListener('keyup', function(event) {
+    if (event.key === 'Enter') {
+        validatePassword();
+    }
+});
 
 //Game Play
 

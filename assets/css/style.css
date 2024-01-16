@@ -19,7 +19,7 @@ body {
     flex-direction: column;
     background-color: #334A51;
     font-family: 'Aniron';
-    color: #96AFB8;
+    color: #94E7FF;
     letter-spacing: 2px;
     align-items: center;
     justify-content: center;
@@ -145,7 +145,7 @@ button {
     height: 30px;
     position: relative;
     padding: 30px;
-    background: transparent;
+    background: #94e7ff91;
     font-family: 'Aniron';
     color:#94E7FF;
     text-align: center;
