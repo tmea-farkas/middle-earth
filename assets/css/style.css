@@ -152,7 +152,10 @@ button {
     font-size: small;
     top: 450px;
 }
-
+::placeholder { /* code acquired from W3Schools*/
+    color:#334A51;
+    font-weight: bolder;
+}
 /* Game Styles */
 #game-play {
     display: none;

@@ -1,4 +1,5 @@
-// Home 
+const moriaSection = document.getElementById('moria');
+
 
 // Modal added to display game rules when clicked
 let btn1 = document.getElementById('myBtn') 
@@ -27,7 +28,7 @@ let closeTitle = document.getElementById('title')
 advBtn.addEventListener('click', toMoria, closeLanding, closeTitle) 
 
 function toMoria() {
-    document.getElementById('moria').style.display = 'block';
+    moriaSection.style.display = 'block';
     document.getElementById('landing').style.display = 'none';
     document.getElementById('title').style.display = 'none';
     console.log('Landing Closed; At the gates')
@@ -40,7 +41,7 @@ function validatePassword() {
 
     
     if (enteredPassword === expectedPassword) {
-        document.getElementById('moria').style.display = 'none';
+        moriaSection.style.display = 'none';
         document.getElementById('game-play').style.display = 'flex' }
     else {
             alert("You shall not pass!");
