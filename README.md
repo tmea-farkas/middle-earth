@@ -119,7 +119,7 @@ All content has been curated by me, Timea Farkas.
 Help during development accrued from:
 - Matthew Bodden, mentor
 - Slack colleagues
-- W3Schools providing explanations
+- W3Schools providing some code syntaxes
 - ChatGPT providing detailed explanations to some elements and attributes
 - Youtube to gain insight into making similar games
 

@@ -55,4 +55,19 @@ document.getElementById('riddle').addEventListener('keyup', function(event) {
 });
 
 //Game Play
+var cardList = [
+    'aragorn',
+    'arwen',
+    'boromir',
+    'gandalf',
+    'gimli',
+    'gollum',
+    'legolas',
+    'samwise'
+]
+var cardSet;
+var container = [];
+
+cardSet = cardList.concat(cardList); // makes two of each card
+console.log(cardSet);
 
