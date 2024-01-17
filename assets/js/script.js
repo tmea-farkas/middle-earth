@@ -55,7 +55,7 @@ document.getElementById('riddle').addEventListener('keyup', function(event) {
 });
 
 //Game Play
-var cardList = [
+const cardList = [
     'aragorn',
     'arwen',
     'boromir',

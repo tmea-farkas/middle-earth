@@ -78,7 +78,7 @@ button {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
   .modal-content {
-    height: 70%;
+    height:70%;
     font-size: 12px;
     background-color: #69787d;
     color:#94E7FF;
