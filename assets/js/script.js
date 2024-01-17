@@ -38,8 +38,10 @@ function validatePassword() {
     var enteredPassword = document.getElementById('riddle').value.toLowerCase();
     var expectedPassword = "mellon".toLowerCase();
 
+    
     if (enteredPassword === expectedPassword) {
-        window.location.href = '#game-play' }
+        document.getElementById('moria').style.display = 'none';
+        document.getElementById('game-play').style.display = 'flex' }
     else {
             alert("You shall not pass!");
         }
