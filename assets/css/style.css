@@ -180,7 +180,6 @@ button {
     position: relative;
     transform-style: preserve-3d;
     transition: transform 0.5s;
-    transform: scale(1);
 }
 /* placing the cards on top of each other*/
 .front, .back {
@@ -189,16 +188,13 @@ button {
     position: absolute;
     backface-visibility: hidden;
 }
-.card:active {
-    transform: scale(.95);
+.card:hover {
     transition: transform 0.3s;
 }
-.card.flip {
-    transform: rotateY(180deg);
+.back {
+    transform: rotateY('180deg');
 }
-.front {
-    transform: rotateY(180deg);
-}
+
 /* Media quiries*/
 
 /* Tablets and up */
@@ -210,7 +206,7 @@ button {
 }
 
 .game-container {
-    max-width: 50%;
+    max-width: 70%;
 }
 
 #riddle {
@@ -231,7 +227,8 @@ button {
 }
 
 .game-container {
-    max-width: 50%;
+    max-width: 60%;
+    height: 800px;
 }
 
 #riddle {
@@ -245,6 +242,10 @@ button {
         top: 750px;
         left: 200px;
         font-size: x-large;
+    }
+    .game-container {
+        max-width: 70%;
+        height: 1500px;
     }
 }
 }

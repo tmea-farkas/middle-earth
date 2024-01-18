@@ -61,3 +61,9 @@ document.getElementById('riddle').addEventListener('keyup', function(event) {
 //Game Play
 
 //Reset Button
+
+// Timer
+
+// Flip count
+
+//Exit
