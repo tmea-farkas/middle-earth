@@ -161,42 +161,24 @@ button {
     display: none;
     justify-content: center;
     align-items: center;
-}
-ul {
-    list-style: none;
-    }
-    
+} 
 .game-container {
-    width: 100%;
-    display: flex;
+    width: 80%;
     justify-content: center;
-    padding: 20px;
+    padding: 15px;
     border-radius: 15px;
+    margin: 10px auto;
     background: #96AFB8;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
-    }
-
 /*creates 4x4 grid layout*/    
-.game-grid {
-    padding: 3px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    }
-    
-
-.card img {
+    gap: 0 10px;
+}
+#card img {
     object-fit:contain;
     max-width: 100%;
     max-height: 100%;
-    }
-    
-.back {
-    display: none;
-    }
-
-.card:hover {
-    transform: rotateY(180deg);
 }
 
 /* Media quiries*/

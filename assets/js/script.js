@@ -1,4 +1,8 @@
 const moriaSection = document.getElementById('moria');
+const gameContainer = document.querySelector('.game-container');
+let firstCard, secondCard;
+
+
 
 
 // Modal added to display game rules when clicked
@@ -55,19 +59,5 @@ document.getElementById('riddle').addEventListener('keyup', function(event) {
 });
 
 //Game Play
-const cardList = [
-    'aragorn',
-    'arwen',
-    'boromir',
-    'gandalf',
-    'gimli',
-    'gollum',
-    'legolas',
-    'samwise'
-]
-var cardSet;
-var container = [];
 
-cardSet = cardList.concat(cardList); // makes two of each card
-console.log(cardSet);
-
+//Reset Button
