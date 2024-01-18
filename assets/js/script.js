@@ -46,7 +46,7 @@ function validatePassword() {
     
     if (enteredPassword === expectedPassword) {
         moriaSection.style.display = 'none';
-        document.getElementById('game-play').style.display = 'flex' }
+        document.getElementById('myGame').style.display = 'flex' }
     else {
             alert("You shall not pass!");
         }
