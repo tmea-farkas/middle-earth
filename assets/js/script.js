@@ -1,9 +1,9 @@
 const moriaSection = document.getElementById('moria');
-const gameContainer = document.querySelector('.game-container');
+const cards = document.querySelectorAll('.card');
+
+let flippedCard = false;
 let firstCard, secondCard;
-
-
-
+let lockBoard = false;
 
 // Modal added to display game rules when clicked
 let btn1 = document.getElementById('myBtn') 
@@ -59,6 +59,15 @@ document.getElementById('riddle').addEventListener('keyup', function(event) {
 });
 
 //Game Play
+
+cards.forEach(card => card.addEventListener('click', flipCard));
+
+//flip cards
+function flipCard() {
+    this.classList.add('flip');
+}
+
+//shuffle cards
 
 //Reset Button
 
