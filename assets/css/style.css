@@ -187,7 +187,7 @@ button {
     transition: transform .3s;
 }
 .card.flip {
-    transform: rotateY(180deg);
+    transform: rotateY(-180deg);
 }
 /* placing the cards on top of each other*/
 .front,
