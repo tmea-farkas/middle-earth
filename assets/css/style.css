@@ -162,7 +162,7 @@ button {
 }
 .game-container {
     width: 100%;
-    height: 500px;
+    height: 400px;
     justify-content: center;
     padding: 15px;
     border-radius: 15px;
@@ -196,10 +196,59 @@ button {
     height: 100%;
     position: absolute;
     backface-visibility: hidden;
+    border-radius: 5%;
 }
 .back {
     transform: rotateY(180deg);
 }
+
+/*In-game buttons*/
+
+#topBtns {
+    display: none;
+}
+#bottomBtns {
+    display: none;
+}
+.timer {
+    display: flex;
+    padding: 0 10px;
+    font-size: medium;
+    position:relative;
+    left: -90px;
+    margin-top: 10px;
+    border-radius: 5px;
+    color:#334A51;
+    background-color: #96AFB8;
+}
+.countdown {
+    color:#94E7FF;
+}
+.reset {
+    display: flex;
+    padding: 0 10px;
+    font-size: medium;
+    position:relative;
+    left: -90px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 5px;
+    color:#334A51;
+    background-color: #96AFB8;
+}
+.homeBtn {
+    display: flex;
+    padding: 0 10px;
+    font-size: medium;
+    position:relative;
+    left: 150px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    color:#334A51;
+    background-color: #96AFB8;
+    top: -35px;
+}
+
 /* Media quiries*/
 
 /* Tablets and up */

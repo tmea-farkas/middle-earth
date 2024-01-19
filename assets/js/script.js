@@ -35,8 +35,11 @@ function toMoria() {
     moriaSection.style.display = 'block';
     document.getElementById('landing').style.display = 'none';
     document.getElementById('title').style.display = 'none';
+    document.getElementById('topBtns').style.display = 'block';
+    document.getElementById('bottomBtns').style.display = 'block';
     console.log('Landing Closed; At the gates')
 }
+
 // Password validation
 
 function validatePassword() {
@@ -59,6 +62,7 @@ document.getElementById('riddle').addEventListener('keyup', function(event) {
 });
 
 //Game Play
+
 
 cards.forEach(card => card.addEventListener('click', flipCard));
 
@@ -111,18 +115,25 @@ function resetBoard() {
     [firstCard, secondCard] = [null, null];
 }
 
+//shuffle
 (function shuffleCards() {
     cards.forEach(card => {
-        let randomPosition = Math.floor(Math.random() * 16);
+        let randomPosition = Math.floor(Math.random() * 16); //IIFE to invoke this function at the start of the game
         card.style.order = randomPosition;
     });
 })();
-//shuffle cards
+
 
 //Reset Button
 
 // Timer
+function timer(seconds) {
+   const now = Date.now();
+   const then = now + seconds * 1000;
+   setInterval(() => {
 
+   }, 1000);
+}
 // Flip count
 
 //Exit
