@@ -124,9 +124,12 @@ function resetBoard() {
 })();
 
 
-//Reset Button
+//Reset Button //NOT FINAL
+let resetBtn = document.getElementById('reset');
+resetBtn.addEventListener('click', resetBoard);
 
 // Timer
+
 function timer(seconds) {
    const now = Date.now();
    const then = now + seconds * 1000;
@@ -134,6 +137,5 @@ function timer(seconds) {
 
    }, 1000);
 }
-// Flip count
+//Game Exit
 
-//Exit
