@@ -197,7 +197,7 @@ button {
     position: absolute;
     backface-visibility: hidden;
 }
-.front {
+.back {
     transform: rotateY(180deg);
 }
 /* Media quiries*/

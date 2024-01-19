@@ -65,7 +65,32 @@ cards.forEach(card => card.addEventListener('click', flipCard));
 //flip cards
 function flipCard() {
     this.classList.add('flip');
-}
+
+    if (!flippedCard) {
+        flippedCard = true;
+        firstCard = this;
+    }else {
+        flippedCard = false;
+        secondCard = this;
+    
+    if (firstCard.dataset.name ===
+        secondCard.dataset.name)//matching 
+        {
+           firstCard.removeEventListener('click', flipCard);
+           secondCard.removeEventListener('click', flipCard) 
+    } else {
+
+        setTimeout(() => {
+
+        
+        firstCard.classList.remove('flip');
+        secondCard.classList.remove('flip');
+        }, 1500);
+    }
+    
+    }
+    }
+
 
 //shuffle cards
 
