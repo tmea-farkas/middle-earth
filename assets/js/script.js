@@ -1,6 +1,7 @@
 const moriaSection = document.getElementById('moria');
 const cards = document.querySelectorAll('.card');
 
+
 let flippedCard = false;
 let firstCard, secondCard;
 let lockBoard = false;
@@ -14,6 +15,7 @@ let closeBtn = document.getElementsByClassName('close')[0]
 
 closeBtn.addEventListener('click', closeModal)
 modal.addEventListener('click', closeModal)
+
 
 //Two ways to close modal. On button click and if clicked outside of it
 function openModal() {
@@ -55,6 +57,7 @@ function validatePassword() {
         }
 
     }
+
 document.getElementById('riddle').addEventListener('keyup', function(event) {
     if (event.key === 'Enter') {
         validatePassword();
@@ -138,4 +141,14 @@ function timer(seconds) {
    }, 1000);
 }
 //Game Exit
+let homeBtn = document.getElementById('backHome')
+homeBtn.addEventListener('click', goHome)
 
+function goHome() {
+    console.log('backHome');
+    const elementsToHide = ['myGame', 'timer', 'reset', 'backHome'];
+    const elementsToShow = ['landing', 'title'];
+
+    elementsToHide.forEach(id => document.getElementById(id).style.display = 'none');
+    elementsToShow.forEach(id => document.getElementById(id).style.display = 'block');
+}
