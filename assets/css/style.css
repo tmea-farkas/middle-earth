@@ -223,7 +223,14 @@ button {
 }
 .countdown {
     color:#94E7FF;
-}
+    position: relative;
+    left: 90px;
+    width: 150px;
+    font-size: medium;
+    height: 30px;
+    top: -40px;
+    }
+
 .reset {
     display: flex;
     padding: 0 10px;

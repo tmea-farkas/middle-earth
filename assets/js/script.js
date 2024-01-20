@@ -129,9 +129,11 @@ const shuffleCards = (function() {
 })();
 
 //Reset
-document.getElementById('reset').addEventListener('click', resetGame);
+document.getElementById('resetBtn').addEventListener('click', resetGame);
 
 function resetGame() {
+
+    clearInterval(countdown);
 
     cards.forEach(card => {
         card.classList.remove('flip');
@@ -139,12 +141,40 @@ function resetGame() {
     });
 
     resetBoard();
+
     shuffleCards();
 
-    countdownDisplay.innerText = '';
-
+    countdownDisplay.innerHTML = '';
     console.log('Game Reset');
 }
+//Timer
+let countdown;
+let timerBtn = document.getElementById('timerBtn');
+let countdownDisplay = document.getElementById('countdown');
+
+timerBtn.addEventListener('click', startCountdown, resetGame);
+
+function startCountdown() {
+    let seconds = 30;
+    // Disable the timer button during the countdown
+    timerBtn.disabled = true;
+
+    // Start the countdown
+    countdown = setInterval(function () {
+        countdownDisplay.innerText = seconds;
+        seconds--;
+
+        if (seconds < 0) {
+            clearInterval(countdown);
+            countdownDisplay.innerHTML = 'Try Again!';
+            setTimeout(function(){
+                resetGame();
+            timerBtn.disabled = false; 
+            }, 3000); //3 second wait before the game resets
+        }
+    }, 1000);
+}
+
 
 
 //Game Exit
