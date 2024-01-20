@@ -71,14 +71,14 @@ button {
     cursor: pointer;
     border: 4px outset #69787d;
     border-radius: 10px;
-    width: 300px;
-    height: 120px;
+    width: 18rem;
+    height: 7rem;
     justify-content: center;
     align-items: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
   .modal-content {
-    height:70%;
+    height:clamp(300px, 70%, 600px);
     font-size: 12px;
     background-color: #69787d;
     color:#94E7FF;
@@ -88,7 +88,7 @@ button {
     border: 1px solid #888;
     border-radius: 5%;
     text-align: center;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: clamp(300px, 80%, 1000px); /* Could be more or less, depending on screen size */
   }
   .hidden-p {
     text-align: center;
@@ -120,8 +120,8 @@ button {
     cursor: pointer;
     border: 4px outset #69787d;
     border-radius: 10px;
-    width: 300px;
-    height: 120px;
+    width: 18rem;
+    height: 7rem;
     justify-content: center;
     align-items: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -161,8 +161,8 @@ button {
     display:none;
 }
 .game-container {
-    width: 100%;
-    height: 400px;
+    width: 18.75em;
+    height: 25em;
     justify-content: center;
     padding: 15px;
     border-radius: 15px;
@@ -192,8 +192,8 @@ button {
 /* placing the cards on top of each other*/
 .front,
 .back {
-    width: 100%;
-    height: 100%;
+    width: 110%;
+    height: 125%;
     position: absolute;
     backface-visibility: hidden;
     border-radius: 5%;
@@ -216,7 +216,7 @@ button {
     font-size: medium;
     position:relative;
     left: -90px;
-    margin-top: 10px;
+    margin: 10px 10px 10px 30px;
     border-radius: 5px;
     color:#334A51;
     background-color: #96AFB8;
@@ -231,7 +231,7 @@ button {
     position:relative;
     left: -90px;
     margin-top: 10px;
-    margin-left: 10px;
+    margin-left: 40px;
     border-radius: 5px;
     color:#334A51;
     background-color: #96AFB8;
@@ -253,14 +253,20 @@ button {
 
 /* Tablets and up */
 @media screen and (min-width: 768px) {
+
     #myBtn, #adventure-btn {
-    width: 70vw;
-    height: 15vw;
+    width: 30rem;
+    height: 10rem;
     margin-bottom: 20px;
 }
 
 .game-container {
-    max-width: 70%;
+    width: 30em;
+    height: 30em;
+}
+.front, .back {
+width: 100%;
+height: 125%;
 }
 
 #riddle {
@@ -274,15 +280,25 @@ button {
 /*Laptops and above*/
 @media screen and (min-width: 992px) {
 
+#title {
+    font-size: 2.5em;
+}
 #myBtn, #adventure-btn  {
-    width: 70vw;
-    height: 15vw;
+    width: 60rem;
+    height: 13rem;
     margin-bottom: 20px;
+}
+.hidden-p {
+    padding: 50px 30px;
 }
 
 .game-container {
-    max-width: 60%;
-    height: 800px;
+    width: 45em;
+    height: 40em;
+}
+.front, .back {
+    width: 100%;
+    height: 125%;
 }
 
 #riddle {
@@ -290,7 +306,7 @@ button {
     font-size: large;
     top: 700px;
 }
-
+}
 @media screen and (min-width: 1440px) {
     #riddle {
         top: 750px;
@@ -298,8 +314,20 @@ button {
         font-size: x-large;
     }
     .game-container {
-        max-width: 70%;
-        height: 1500px;
+        width: 45em;
+        height: 40em;
     }
-}
+    
+    .timer {
+        top: 50px;
+        left: 0px;
+        font-size: larger;
+    }
+    .reset {
+        left: -250px;
+    }
+    .homeBtn {
+        left: 300px;
+    }
+
 }
