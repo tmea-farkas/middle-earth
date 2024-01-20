@@ -119,33 +119,40 @@ function resetBoard() {
 }
 
 //shuffle
-(function shuffleCards() {
+const shuffleCards = (function() {
+    return function() {
     cards.forEach(card => {
-        let randomPosition = Math.floor(Math.random() * 16); //IIFE to invoke this function at the start of the game
+        let randomPosition = Math.floor(Math.random() * 16); 
         card.style.order = randomPosition;
     });
+}
 })();
 
+//Reset
+document.getElementById('reset').addEventListener('click', resetGame);
 
-//Reset Button //NOT FINAL
-let resetBtn = document.getElementById('reset');
-resetBtn.addEventListener('click', resetBoard);
+function resetGame() {
 
-// Timer
+    cards.forEach(card => {
+        card.classList.remove('flip');
+        card.addEventListener('click', flipCard);
+    });
 
-function timer(seconds) {
-   const now = Date.now();
-   const then = now + seconds * 1000;
-   setInterval(() => {
+    resetBoard();
+    shuffleCards();
 
-   }, 1000);
+    countdownDisplay.innerText = '';
+
+    console.log('Game Reset');
 }
+
+
 //Game Exit
 let homeBtn = document.getElementById('backHome')
 homeBtn.addEventListener('click', goHome)
 
 function goHome() {
-    console.log('backHome');
+    console.log('Back to Home');
     const elementsToHide = ['myGame', 'timer', 'reset', 'backHome'];
     const elementsToShow = ['landing', 'title'];
 
