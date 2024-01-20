@@ -17,20 +17,20 @@ let winClose = document.getElementsByClassName('winClose')[0];
 //Calling Elements
 let timerBtn = document.getElementById('timerBtn');
 let countdownDisplay = document.getElementById('countdown');
-let rulesBtn = document.getElementById('myBtn') 
-let modal = document.getElementById('myModal')
-let closeBtn = document.getElementsByClassName('close')[0]
-let advBtn = document.getElementById('adventure-btn')
-let closeLanding = document.getElementById('landing')
-let closeTitle = document.getElementById('title')
+let rulesBtn = document.getElementById('myBtn');
+let modal = document.getElementById('myModal');
+let closeBtn = document.getElementsByClassName('close')[0];
+let advBtn = document.getElementById('adventure-btn');
+let closeLanding = document.getElementById('landing');
+let closeTitle = document.getElementById('title');
 let homeBtn = document.getElementById('homeBtn');
 
 // Event listeners
 homeBtn.addEventListener('click', goHome);
-rulesBtn.addEventListener('click', openModal)
-closeBtn.addEventListener('click', closeModal)
-modal.addEventListener('click', closeModal)
-advBtn.addEventListener('click', toMoria) 
+rulesBtn.addEventListener('click', openModal);
+closeBtn.addEventListener('click', closeModal);
+modal.addEventListener('click', closeModal);
+advBtn.addEventListener('click', toMoria);
 cards.forEach(card => card.addEventListener('click', flipCard));
 document.getElementById('resetBtn').addEventListener('click', resetGame);
 timerBtn.addEventListener('click', startCountdown, resetGame);
@@ -56,7 +56,7 @@ function openModal() {
 }
 
 function closeModal() {
-    modal.style.display = 'none'
+    modal.style.display = 'none';
 }
 
 function toMoria() {
@@ -76,7 +76,7 @@ function validatePassword() {
         startGame();
         document.getElementById('topBtns').style.display = 'block';
         document.getElementById('bottomBtns').style.display = 'block';
-        document.getElementById('myGame').style.display = 'flex' }
+        document.getElementById('myGame').style.display = 'flex'; }
     else {
         alert("You shall not pass!");
     }
