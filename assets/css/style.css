@@ -102,6 +102,22 @@ button {
     font-size: 28px;
     font-weight: bold;
   }
+  .winClose {
+    color:#334A51;
+    cursor: pointer;
+    font-size: small;
+    top: 200px;
+    position: relative;
+    font-weight: 900;
+  }
+  .winner {
+    position: relative;
+    padding: 30px 10px;
+  }
+  .winner p {
+    position: relative;
+    padding: 50px 10px 0;
+  }
   
   .close:hover,
   .close:focus {

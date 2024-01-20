@@ -159,7 +159,7 @@ let countdownDisplay = document.getElementById('countdown');
 timerBtn.addEventListener('click', startCountdown, resetGame);
 
 function startCountdown() {
-    let seconds = 10;
+    let seconds = 30;
     // Disable the timer button during the countdown
     timerBtn.disabled = true;
 
@@ -191,7 +191,7 @@ homeBtn.addEventListener('click', goHome)
 function goHome() {
     console.log('Back to Home');
     resetGame();
-    const elementsToHide = ['myGame', 'timerBtn', 'resetBtn', 'homeBtn'];
+    const elementsToHide = ['myGame', 'timerBtn', 'resetBtn', 'homeBtn','winModal'];
     const elementsToShow = ['landing', 'title'];
 
     elementsToHide.forEach(id => document.getElementById(id).style.display = 'none');
@@ -204,12 +204,29 @@ function startGame() {
     elementsToShow.forEach(id => document.getElementById(id).style.display = 'block');
 }
 // Win
+//win modal
+let winModal = document.getElementById('winModal')
+let winClose = document.getElementsByClassName('winClose')[0];
+
+winClose.addEventListener('click', goHome)
+console.log('we are back');
+
+function closeWinModal() {
+    console.log('modalClosedWin');
+    winModal.style.display = 'none'
+}
+
+
+//Checking for Win
 function checkForWin() {
     if (score === 8) {
        winner();
     }
 }
+
+
 function winner() {
-    //modal pop
+    console.log('modalUp')
+   winModal.style.display = 'block';
 
 }
