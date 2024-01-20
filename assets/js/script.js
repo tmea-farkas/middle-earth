@@ -1,7 +1,7 @@
 const moriaSection = document.getElementById('moria');
 const cards = document.querySelectorAll('.card');
 
-
+let score = 0;
 let flippedCard = false;
 let firstCard, secondCard;
 let lockBoard = false;
@@ -31,12 +31,12 @@ let advBtn = document.getElementById('adventure-btn')
 let closeLanding = document.getElementById('landing')
 let closeTitle = document.getElementById('title')
 //when button clicked landing diasppears and moria section appears
-advBtn.addEventListener('click', toMoria, closeLanding, closeTitle) 
+advBtn.addEventListener('click', toMoria) 
 
 function toMoria() {
     moriaSection.style.display = 'block';
-    document.getElementById('landing').style.display = 'none';
-    document.getElementById('title').style.display = 'none';
+    closeLanding.style.display = 'none';
+    closeTitle.style.display = 'none';
     console.log('Landing Closed; At the gates')
 }
 
@@ -48,7 +48,9 @@ function validatePassword() {
 
     
     if (enteredPassword === expectedPassword) {
+        shuffleCards();
         moriaSection.style.display = 'none';
+        startGame();
         document.getElementById('topBtns').style.display = 'block';
         document.getElementById('bottomBtns').style.display = 'block';
         document.getElementById('myGame').style.display = 'flex' }
@@ -65,7 +67,6 @@ document.getElementById('riddle').addEventListener('keyup', function(event) {
 });
 
 //Game Play
-
 
 cards.forEach(card => card.addEventListener('click', flipCard));
 
@@ -103,6 +104,9 @@ function checkIfMatched() {
         secondCard.dataset.name)//matching 
         {
         disableCards();
+        score++;
+        //check for win condition
+        checkForWin();
     } else {
         unflipCards();
     }
@@ -155,7 +159,7 @@ let countdownDisplay = document.getElementById('countdown');
 timerBtn.addEventListener('click', startCountdown, resetGame);
 
 function startCountdown() {
-    let seconds = 30;
+    let seconds = 10;
     // Disable the timer button during the countdown
     timerBtn.disabled = true;
 
@@ -165,6 +169,7 @@ function startCountdown() {
         seconds--;
 
         if (seconds < 0) {
+            disableAllCards();
             clearInterval(countdown);
             countdownDisplay.innerHTML = 'Try Again!';
             setTimeout(function(){
@@ -175,17 +180,36 @@ function startCountdown() {
     }, 1000);
 }
 
-
+function disableAllCards() {
+    cards.forEach(card => card.removeEventListener('click', flipCard));
+}
 
 //Game Exit
-let homeBtn = document.getElementById('backHome')
+let homeBtn = document.getElementById('homeBtn')
 homeBtn.addEventListener('click', goHome)
 
 function goHome() {
     console.log('Back to Home');
-    const elementsToHide = ['myGame', 'timer', 'reset', 'backHome'];
+    resetGame();
+    const elementsToHide = ['myGame', 'timerBtn', 'resetBtn', 'homeBtn'];
     const elementsToShow = ['landing', 'title'];
 
     elementsToHide.forEach(id => document.getElementById(id).style.display = 'none');
     elementsToShow.forEach(id => document.getElementById(id).style.display = 'block');
+}
+function startGame() {
+    console.log('Start Game');
+    const elementsToShow = ['myGame', 'timerBtn', 'resetBtn', 'homeBtn'];
+
+    elementsToShow.forEach(id => document.getElementById(id).style.display = 'block');
+}
+// Win
+function checkForWin() {
+    if (score === 8) {
+       winner();
+    }
+}
+function winner() {
+    //modal pop
+
 }
