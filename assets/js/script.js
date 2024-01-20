@@ -35,8 +35,6 @@ function toMoria() {
     moriaSection.style.display = 'block';
     document.getElementById('landing').style.display = 'none';
     document.getElementById('title').style.display = 'none';
-    document.getElementById('topBtns').style.display = 'block';
-    document.getElementById('bottomBtns').style.display = 'block';
     console.log('Landing Closed; At the gates')
 }
 
@@ -49,6 +47,8 @@ function validatePassword() {
     
     if (enteredPassword === expectedPassword) {
         moriaSection.style.display = 'none';
+        document.getElementById('topBtns').style.display = 'block';
+        document.getElementById('bottomBtns').style.display = 'block';
         document.getElementById('myGame').style.display = 'flex' }
     else {
             alert("You shall not pass!");
