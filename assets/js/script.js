@@ -7,8 +7,8 @@ let firstCard, secondCard;
 let lockBoard = false;
 
 // Modal added to display game rules when clicked
-let btn1 = document.getElementById('myBtn') 
-btn1.addEventListener('click', openModal)
+let rulesBtn = document.getElementById('myBtn') 
+rulesBtn.addEventListener('click', openModal)
 
 let modal = document.getElementById('myModal')
 let closeBtn = document.getElementsByClassName('close')[0]
@@ -19,11 +19,9 @@ modal.addEventListener('click', closeModal)
 
 //Two ways to close modal. On button click and if clicked outside of it
 function openModal() {
-    console.log('btn1 clicked')
     modal.style.display = 'block';
 }
 function closeModal() {
-    console.log('modalClosed')
     modal.style.display = 'none'
 }
 //Game Entry
@@ -37,7 +35,6 @@ function toMoria() {
     moriaSection.style.display = 'block';
     closeLanding.style.display = 'none';
     closeTitle.style.display = 'none';
-    console.log('Landing Closed; At the gates')
 }
 
 // Password validation
@@ -149,7 +146,6 @@ function resetGame() {
     shuffleCards();
 
     countdownDisplay.innerHTML = '';
-    console.log('Game Reset');
 }
 //Timer
 let countdown;
@@ -179,6 +175,12 @@ function startCountdown() {
         }
     }, 1000);
 }
+//Stop Timer
+let countdownInterval;
+function stopTimer(){
+    clearInterval(countdown);
+}
+
 
 function disableAllCards() {
     cards.forEach(card => card.removeEventListener('click', flipCard));
@@ -189,7 +191,6 @@ let homeBtn = document.getElementById('homeBtn')
 homeBtn.addEventListener('click', goHome)
 
 function goHome() {
-    console.log('Back to Home');
     resetGame();
     const elementsToHide = ['myGame', 'timerBtn', 'resetBtn', 'homeBtn','winModal'];
     const elementsToShow = ['landing', 'title'];
@@ -198,22 +199,20 @@ function goHome() {
     elementsToShow.forEach(id => document.getElementById(id).style.display = 'block');
 }
 function startGame() {
-    console.log('Start Game');
     const elementsToShow = ['myGame', 'timerBtn', 'resetBtn', 'homeBtn'];
 
     elementsToShow.forEach(id => document.getElementById(id).style.display = 'block');
 }
 // Win
 //win modal
-let winModal = document.getElementById('winModal')
+let winModal = document.getElementById('winModal');
 let winClose = document.getElementsByClassName('winClose')[0];
 
-winClose.addEventListener('click', goHome)
-console.log('we are back');
+winClose.addEventListener('click', goHome);
 
 function closeWinModal() {
     console.log('modalClosedWin');
-    winModal.style.display = 'none'
+    winModal.style.display = 'none';
 }
 
 
@@ -226,7 +225,7 @@ function checkForWin() {
 
 
 function winner() {
-    console.log('modalUp')
+    stopTimer();
    winModal.style.display = 'block';
 
 }
