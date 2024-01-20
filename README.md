@@ -86,6 +86,7 @@ When possible I am also planning on implementing an instant feedback feature con
 - Favicon.io - to create favicon
 - TinyJPG - to compress images
 - ColorSpace - to find a matching color palette
+- Am I responsive - to test responsiveness
 
 
 # Deployment
@@ -112,6 +113,9 @@ During development there were several bugs that needed adressing:
     - redirect the user to the game-play section upon pressing **Enter** instead of adding a "Correct Password" message.
 4. adjusting the font colour of the **placeholder** text of the input element
     - found the correct syntax for the code and applied it from W3Schools
+5. in-game buttons displayed in the entry section
+    - add display block to buttons inside the password validation function
+
 
 
 # Credits
