@@ -1,35 +1,63 @@
+
 const moriaSection = document.getElementById('moria');
 const cards = document.querySelectorAll('.card');
 
+//Block Scopes
 let score = 0;
 let flippedCard = false;
 let firstCard, secondCard;
 let lockBoard = false;
+let countdown;
+let countdownInterval;
 
-// Modal added to display game rules when clicked
+//Modals
+let winModal = document.getElementById('winModal');
+let winClose = document.getElementsByClassName('winClose')[0];
+
+//Calling Elements
+let timerBtn = document.getElementById('timerBtn');
+let countdownDisplay = document.getElementById('countdown');
 let rulesBtn = document.getElementById('myBtn') 
-rulesBtn.addEventListener('click', openModal)
-
 let modal = document.getElementById('myModal')
 let closeBtn = document.getElementsByClassName('close')[0]
-
-closeBtn.addEventListener('click', closeModal)
-modal.addEventListener('click', closeModal)
-
-
-//Two ways to close modal. On button click and if clicked outside of it
-function openModal() {
-    modal.style.display = 'block';
-}
-function closeModal() {
-    modal.style.display = 'none'
-}
-//Game Entry
 let advBtn = document.getElementById('adventure-btn')
 let closeLanding = document.getElementById('landing')
 let closeTitle = document.getElementById('title')
-//when button clicked landing diasppears and moria section appears
+let homeBtn = document.getElementById('homeBtn');
+
+// Event listeners
+homeBtn.addEventListener('click', goHome);
+rulesBtn.addEventListener('click', openModal)
+closeBtn.addEventListener('click', closeModal)
+modal.addEventListener('click', closeModal)
 advBtn.addEventListener('click', toMoria) 
+cards.forEach(card => card.addEventListener('click', flipCard));
+document.getElementById('resetBtn').addEventListener('click', resetGame);
+timerBtn.addEventListener('click', startCountdown, resetGame);
+winClose.addEventListener('click', goHome);
+
+//Functions
+document.getElementById('riddle').addEventListener('keyup', function(event) {
+    if (event.key === 'Enter') {
+        validatePassword();
+    }
+});
+
+const shuffleCards = () => {
+    cards.forEach(card => {
+        let randomPosition = Math.floor(Math.random() * 16);
+        card.style.order = randomPosition;
+    });
+}
+
+//Home section
+function openModal() {
+    modal.style.display = 'block';
+}
+
+function closeModal() {
+    modal.style.display = 'none'
+}
 
 function toMoria() {
     moriaSection.style.display = 'block';
@@ -37,13 +65,11 @@ function toMoria() {
     closeTitle.style.display = 'none';
 }
 
-// Password validation
-
+//Password Validation - Moria section
 function validatePassword() {
-    var enteredPassword = document.getElementById('riddle').value.toLowerCase();
-    var expectedPassword = "mellon".toLowerCase();
-
-    
+    let enteredPassword = document.getElementById('riddle').value.toLowerCase();
+    let expectedPassword = "mellon".toLowerCase();
+  
     if (enteredPassword === expectedPassword) {
         shuffleCards();
         moriaSection.style.display = 'none';
@@ -52,22 +78,11 @@ function validatePassword() {
         document.getElementById('bottomBtns').style.display = 'block';
         document.getElementById('myGame').style.display = 'flex' }
     else {
-            alert("You shall not pass!");
-        }
-
+        alert("You shall not pass!");
     }
+}
 
-document.getElementById('riddle').addEventListener('keyup', function(event) {
-    if (event.key === 'Enter') {
-        validatePassword();
-    }
-});
-
-//Game Play
-
-cards.forEach(card => card.addEventListener('click', flipCard));
-
-//flip cards
+//In-game
 function flipCard() {
     if (lockBoard) return;
     if (this === firstCard) return;
@@ -92,14 +107,12 @@ function unflipCards() {
         firstCard.classList.remove('flip');
         secondCard.classList.remove('flip');
 
-    resetBoard();
-}, 1000);
+        resetBoard();
+    }, 1000);
 }
 
 function checkIfMatched() {
-    if (firstCard.dataset.name ===
-        secondCard.dataset.name)//matching 
-        {
+    if (firstCard.dataset.name === secondCard.dataset.name) {
         disableCards();
         score++;
         //check for win condition
@@ -108,57 +121,34 @@ function checkIfMatched() {
         unflipCards();
     }
 }
+
 function disableCards() {
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
-
     resetBoard();
 }
+
 function resetBoard() {
     [flippedCard, lockBoard] = [false, false]; //code from freeCodeCamp.org
     [firstCard, secondCard] = [null, null];
 }
 
-//shuffle
-const shuffleCards = (function() {
-    return function() {
-    cards.forEach(card => {
-        let randomPosition = Math.floor(Math.random() * 16); 
-        card.style.order = randomPosition;
-    });
-}
-})();
-
-//Reset
-document.getElementById('resetBtn').addEventListener('click', resetGame);
-
 function resetGame() {
-
     clearInterval(countdown);
-
     cards.forEach(card => {
         card.classList.remove('flip');
         card.addEventListener('click', flipCard);
     });
-
     resetBoard();
-
     shuffleCards();
-
+    timerBtn.disabled = false;
     countdownDisplay.innerHTML = '';
 }
-//Timer
-let countdown;
-let timerBtn = document.getElementById('timerBtn');
-let countdownDisplay = document.getElementById('countdown');
-
-timerBtn.addEventListener('click', startCountdown, resetGame);
 
 function startCountdown() {
     let seconds = 30;
     // Disable the timer button during the countdown
     timerBtn.disabled = true;
-
     // Start the countdown
     countdown = setInterval(function () {
         countdownDisplay.innerText = seconds;
@@ -170,62 +160,46 @@ function startCountdown() {
             countdownDisplay.innerHTML = 'Try Again!';
             setTimeout(function(){
                 resetGame();
-            timerBtn.disabled = false; 
+                timerBtn.disabled = false; 
             }, 3000); //3 second wait before the game resets
         }
     }, 1000);
 }
-//Stop Timer
-let countdownInterval;
+
 function stopTimer(){
     clearInterval(countdown);
 }
-
 
 function disableAllCards() {
     cards.forEach(card => card.removeEventListener('click', flipCard));
 }
 
-//Game Exit
-let homeBtn = document.getElementById('homeBtn')
-homeBtn.addEventListener('click', goHome)
-
 function goHome() {
     resetGame();
     const elementsToHide = ['myGame', 'timerBtn', 'resetBtn', 'homeBtn','winModal'];
     const elementsToShow = ['landing', 'title'];
-
     elementsToHide.forEach(id => document.getElementById(id).style.display = 'none');
     elementsToShow.forEach(id => document.getElementById(id).style.display = 'block');
 }
+
 function startGame() {
     const elementsToShow = ['myGame', 'timerBtn', 'resetBtn', 'homeBtn'];
-
     elementsToShow.forEach(id => document.getElementById(id).style.display = 'block');
 }
-// Win
-//win modal
-let winModal = document.getElementById('winModal');
-let winClose = document.getElementsByClassName('winClose')[0];
-
-winClose.addEventListener('click', goHome);
 
 function closeWinModal() {
-    console.log('modalClosedWin');
     winModal.style.display = 'none';
 }
 
-
-//Checking for Win
+//End of Game
 function checkForWin() {
     if (score === 8) {
        winner();
     }
 }
 
-
 function winner() {
     stopTimer();
-   winModal.style.display = 'block';
-
+    score = 0;
+    winModal.style.display = 'block';
 }
