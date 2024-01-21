@@ -67,7 +67,7 @@ All images have been sourced from Reddit (specifically looked for high-resolutio
 
 ### The landing page
 
-- LAnding page with two buttons provided. *Gather the Knowledge* is a button containing the rules so first-time users can familiarize with the game before starting. *Adventure Awaits!* is the button that takes the user to the entrance where password provided, they can enter the game; this button also allows returning users to go straight into the game without having to read instructions first.
+- Landing page with two buttons provided. *Gather the Knowledge* is a button containing the rules so first-time users can familiarize with the game before starting. *Adventure Awaits!* is the button that takes the user to the entrance where password provided, they can enter the game; this button also allows returning users to go straight into the game without having to read instructions first.
 
 ![Landing Section](<https://github.com/tmea-farkas/middle-earth/blob/main/assets/images/readme/home.page.jpg>)
 
@@ -87,9 +87,9 @@ All images have been sourced from Reddit (specifically looked for high-resolutio
 
 ### Gameplay
 - Responsively designed game of 16 matching cards. Additionally there's three buttons included on this section:
-    1. A **Timer** that has a 30 second countdown
-    2. a **Reset** button that resets the game
-    3. a **Home** button that takes the user back to the landing section
+    - a **Timer** that has a 30 second countdown
+    - a **Reset** button that resets the game
+    - a **Home** button that takes the user back to the landing section
 
 ![Game](<https://github.com/tmea-farkas/middle-earth/blob/main/assets/images/readme/game.jpg>)
 
@@ -111,7 +111,6 @@ In the future I'd like to add another feature that counts scores and keeps a log
 - VSCode - to build the project
 - GitHub - to save and store files
 - 1001 Fonts - create custom font
-- Font Awesome - to import icons
 - Favicon.io - to create favicon
 - TinyJPG - to compress images
 - ColorSpace - to find a matching color palette
@@ -140,6 +139,13 @@ No errors displayed when tested through JSHint.
 
 ![JavaScript Testing](<https://github.com/tmea-farkas/middle-earth/blob/main/assets/images/readme/javascript.jpg>)
 
+- Lighthouse
+![Landing](<https://github.com/tmea-farkas/middle-earth/blob/main/assets/images/readme/lh.home.jpg>)
+![Moria](<https://github.com/tmea-farkas/middle-earth/blob/main/assets/images/readme/lh.moria.jpg>)
+![Game](<https://github.com/tmea-farkas/middle-earth/blob/main/assets/images/readme/lh.game.jpg>)
+
+- ColourScheme
+![Colour Palette](<https://github.com/tmea-farkas/middle-earth/blob/main/assets/images/readme/colour-testing.png>)
 # Bugs
 
 During development there were several bugs that needed adressing:
@@ -155,7 +161,10 @@ During development there were several bugs that needed adressing:
     - add display block to buttons inside the password validation function
 6. fix how elements display in responsive view 
     - adjusted parameters for all media quieries
+7. missing semicolons in script
+    - placing the semicolons in the respective places
 
+No further bugs have been discovered.
 
 # Credits
 All content has been curated by me, Timea Farkas.
@@ -167,5 +176,3 @@ Help during development accrued from:
 - Youtube to gain insight into making similar games
 
 Thank you for your time reading this. Hope you enjoy playing this game as much as I enjoyed creating it for you!
-
-[def]: am.i.responsive.jpg
