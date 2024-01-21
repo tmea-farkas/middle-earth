@@ -1,5 +1,7 @@
 # Games of Moria
 
+![Responsive image of the website](<https://github.com/tmea-farkas/middle-earth/blob/main/assets/images/readme/am.i.responsive.jpg>)
+
 Welcome to the [Games of Moria](https://tmea-farkas.github.io/middle-earth/) memory card game.
 
 # Introduction
@@ -65,14 +67,41 @@ All images have been sourced from Reddit (specifically looked for high-resolutio
 
 ### The landing page
 
+- LAnding page with two buttons provided. *Gather the Knowledge* is a button containing the rules so first-time users can familiarize with the game before starting. *Adventure Awaits!* is the button that takes the user to the entrance where password provided, they can enter the game; this button also allows returning users to go straight into the game without having to read instructions first.
+
+![Landing Section](<https://github.com/tmea-farkas/middle-earth/blob/main/assets/images/readme/home.page.jpg>)
+
+### Rules
+- Fully responsive modal that the user can open by clicking on the relevant button, and close by either clicking away from it or on the "X".
+
+![Rules Modal](<https://github.com/tmea-farkas/middle-earth/blob/main/assets/images/readme/rules.jpg>)
+
 ### Game Entry 
+- Game entry. This will take the user to the game, provided they enter the password correctly.
+
+![Gates of Moria](<https://github.com/tmea-farkas/middle-earth/blob/main/assets/images/readme/gates.jpg>)
+
+- In case of an incorrect password, the message below will show:
+
+![Incorrect Password](<https://github.com/tmea-farkas/middle-earth/blob/main/assets/images/readme/incorrect.jpg>)
 
 ### Gameplay
+- Responsively designed game of 16 matching cards. Additionally there's three buttons included on this section:
+    1. A **Timer** that has a 30 second countdown
+    2. a **Reset** button that resets the game
+    3. a **Home** button that takes the user back to the landing section
+
+![Game](<https://github.com/tmea-farkas/middle-earth/blob/main/assets/images/readme/game.jpg>)
+
+### Win
+- There is a modal that pops up if the player successfully completed the game; with or without using the timer. They can also go back to the landing page by clicking on the *Back to the Shire* button.
+
+![Winner](<https://github.com/tmea-farkas/middle-earth/blob/main/assets/images/readme/win.jpg>)
+
 
 ## Features left to implement 
 
-When possible I am also planning on implementing an instant feedback feature connected to the end result of the game where users that opted for completing the game with the timer activated and managed to successfully complete the game within the time allotted, will get a "reward" message containing a fun-fact relating to the movie adaptations.
-
+In the future I'd like to add another feature that counts scores and keeps a log of the Top 5, so users can try and beat those.
 
 # Technologies Used
 - Languages:
@@ -99,8 +128,17 @@ To deploy the project I used GitHub as my hosting platform and took the steps as
 - under branch click **Save**
 
 # Testing
-- HMTL & CSS
+- HMTL & CSS - using W3 Validator
+    - upon the HTML testing there were 5 warnings flagged up in regards to sections lacking heading, which was intended, so there was no action taken
+![HTML Validation](<https://github.com/tmea-farkas/middle-earth/blob/main/assets/images/readme/html.w3.jpg>)
+
+    - no errors were displayed when testing CSS
+![CSS Validation](<https://github.com/tmea-farkas/middle-earth/blob/main/assets/images/readme/w3.jpg>)
+
 - JavaScript
+No errors displayed when tested through JSHint.
+
+![JavaScript Testing](<https://github.com/tmea-farkas/middle-earth/blob/main/assets/images/readme/javascript.jpg>)
 
 # Bugs
 
@@ -129,3 +167,5 @@ Help during development accrued from:
 - Youtube to gain insight into making similar games
 
 Thank you for your time reading this. Hope you enjoy playing this game as much as I enjoyed creating it for you!
+
+[def]: am.i.responsive.jpg
