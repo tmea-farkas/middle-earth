@@ -140,11 +140,15 @@ No errors displayed when tested through JSHint.
 ![JavaScript Testing](<https://github.com/tmea-farkas/middle-earth/blob/main/assets/images/readme/javascript.jpg>)
 
 - Lighthouse
+
 ![Landing](<https://github.com/tmea-farkas/middle-earth/blob/main/assets/images/readme/lh.home.jpg>)
+
 ![Moria](<https://github.com/tmea-farkas/middle-earth/blob/main/assets/images/readme/lh.moria.jpg>)
+
 ![Game](<https://github.com/tmea-farkas/middle-earth/blob/main/assets/images/readme/lh.game.jpg>)
 
 - ColourScheme
+
 ![Colour Palette](<https://github.com/tmea-farkas/middle-earth/blob/main/assets/images/readme/colour-testing.png>)
 
 - During development the project has been tested continuously for responsiveness and functionality using Google Dev Tools.
@@ -164,7 +168,7 @@ During development there were several bugs that needed adressing:
     - solved the issue by adjusting the background-position from 75% to 50%.
 2. figuring out the cards to display in a 4x4 grid
     - changed *display: grid* to *flex* so grid-like display can be achieved using flexbox properties
-3. correcting the **validatePAssword** function 
+3. correcting the **validatePassword** function 
     - redirect the user to the game-play section upon pressing **Enter** instead of adding a "Correct Password" message.
 4. adjusting the font colour of the **placeholder** text of the input element
     - found the correct syntax for the code and applied it from W3Schools
