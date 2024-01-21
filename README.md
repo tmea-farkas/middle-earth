@@ -128,7 +128,7 @@ To deploy the project I used GitHub as my hosting platform and took the steps as
 
 # Testing
 - HMTL & CSS - using W3 Validator
-    - upon the HTML testing there were 5 warnings flagged up in regards to sections lacking heading, which was intended, so there was no action taken
+    - no errors were displayed when testing HTML markup
 ![HTML Validation](<https://github.com/tmea-farkas/middle-earth/blob/main/assets/images/readme/html.w3.jpg>)
 
     - no errors were displayed when testing CSS
@@ -146,6 +146,17 @@ No errors displayed when tested through JSHint.
 
 - ColourScheme
 ![Colour Palette](<https://github.com/tmea-farkas/middle-earth/blob/main/assets/images/readme/colour-testing.png>)
+
+- During development the project has been tested continuously for responsiveness and functionality using Google Dev Tools.
+- the project has also been tested on Samsung S21 and S21 Pro, Lenovo ThinkPad and on PC (with a 2K screen) as well as Google Chrome, Bing and Mozzilla Firefox. 
+- from a user point of view the following aspects have been tested:
+    - can the website be easily navigated?
+        - yes, with the buttons provided on the landing page as well as in-game, ensures the user a well rounded navigation
+    - does the user get instant feedback on their progression in the game?
+        - yes, the pop-up modal in the event of a win and the *Try again!* message in the event of the timer running out
+    - can a returning user access the game with ease?
+        - yes, with the button provided in the landing section the user can enter the game without having to read the rules
+
 # Bugs
 
 During development there were several bugs that needed adressing:
@@ -164,7 +175,7 @@ During development there were several bugs that needed adressing:
 7. missing semicolons in script
     - placing the semicolons in the respective places
 
-No further bugs have been discovered.
+**One remaining bug noticed before submission**: the timer feature does not reset with each new game, so after a few rounds of game the Win message pops up. - to be addressed at a later time - 
 
 # Credits
 All content has been curated by me, Timea Farkas.
